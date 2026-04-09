@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en"><head>
+<html class="scroll-smooth" lang="en">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>MICDS Class of 2001 | 25th Reunion</title>
-<meta name="description" content="MICDS Class of 2001 25th Reunion — May 1–3, 2026 in St. Louis, Missouri. Full schedule, RSVP form, and details." />
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -13,335 +13,338 @@
         theme: {
           extend: {
             "colors": {
-                    "surface-dim": "#dbdad5",
-                    "surface-container-highest": "#e4e2dd",
-                    "on-primary-fixed-variant": "#930011",
-                    "surface-variant": "#e4e2dd",
-                    "on-secondary-fixed": "#00201b",
-                    "on-tertiary": "#ffffff",
-                    "on-surface": "#1b1c19",
-                    "surface-bright": "#fbf9f4",
+                    "primary": "#ab0016",         /* MICDS Red */
+                    "on-primary": "#ffffff",
                     "primary-container": "#d12229",
                     "on-primary-container": "#ffe9e7",
-                    "secondary-fixed-dim": "#99d2c5",
-                    "tertiary-fixed-dim": "#ffb2bb",
-                    "surface-tint": "#bd0e1e",
-                    "secondary": "#30685e",
-                    "on-secondary-fixed-variant": "#144f46",
-                    "tertiary": "#8b3746",
-                    "tertiary-fixed": "#ffd9dc",
-                    "secondary-fixed": "#b4eee1",
+                    "secondary": "#30685e",       /* MICDS Green */
                     "on-secondary": "#ffffff",
-                    "inverse-on-surface": "#f2f1eb",
                     "secondary-container": "#b4eee1",
-                    "on-error": "#ffffff",
-                    "surface-container-high": "#eae8e3",
+                    "on-secondary-container": "#144f46",
+                    "tertiary": "#8b3746",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#ffd9dc",
+                    "on-tertiary-container": "#400011",
                     "background": "#fbf9f4",
-                    "outline-variant": "#e5bdb9",
-                    "surface-container-lowest": "#ffffff",
-                    "error-container": "#ffdad6",
-                    "on-error-container": "#93000a",
-                    "primary-fixed": "#ffdad6",
-                    "on-primary-fixed": "#410003",
-                    "outline": "#906f6c",
-                    "on-secondary-container": "#376e63",
-                    "on-primary": "#ffffff",
-                    "tertiary-container": "#a94f5d",
-                    "on-tertiary-fixed": "#400011",
-                    "surface-container-low": "#f5f3ee",
-                    "error": "#ba1a1a",
-                    "on-tertiary-container": "#ffe8ea",
                     "on-background": "#1b1c19",
-                    "on-surface-variant": "#5c403d",
-                    "inverse-surface": "#30312d",
-                    "inverse-primary": "#ffb3ad",
-                    "surface-container": "#efeee8",
                     "surface": "#fbf9f4",
-                    "on-tertiary-fixed-variant": "#7b2b3a",
-                    "primary-fixed-dim": "#ffb3ad",
-                    "primary": "#ab0016"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
+                    "on-surface": "#1b1c19",
+                    "surface-variant": "#e4e2dd",
+                    "on-surface-variant": "#5c403d",
+                    "surface-dim": "#dbdad5",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f5f3ee",
+                    "surface-container": "#efeee8",
+                    "surface-container-high": "#eae8e3",
+                    "surface-container-highest": "#e4e2dd"
             },
             "fontFamily": {
-                    "headline": ["Noto Serif"],
-                    "body": ["Inter"],
-                    "label": ["Inter"]
+                    "headline": ["Noto Serif", "serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "sans": ["Inter", "sans-serif"]
             }
           },
         },
       }
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
-        .serif-display { font-family: 'Noto Serif', serif; }
-        .sans-label { font-family: 'Inter', sans-serif; letter-spacing: 0.05em; }
-    </style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        vertical-align: middle;
+    }
+</style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
 
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#fbf9f4]/80 backdrop-blur-xl transition-all duration-300">
-<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
-<div class="font-serif text-2xl font-bold text-[#ab0016] tracking-tight">MICDS Class of 2001</div>
-<div class="hidden md:flex space-x-8 items-center">
-<a class="font-sans text-xs font-semibold uppercase tracking-wider text-[#ab0016] border-b-2 border-[#ab0016] pb-1" href="#schedule">Schedule</a>
-<a class="font-sans text-xs font-semibold uppercase tracking-wider text-stone-600 hover:text-[#ab0016] transition-colors duration-300" href="#rsvp">RSVP</a>
-<a class="font-sans text-xs font-semibold uppercase tracking-wider text-stone-600 hover:text-[#ab0016] transition-colors duration-300" href="#giving">Giving</a>
-<a class="bg-primary text-on-primary px-6 py-2.5 rounded-md font-sans text-xs font-bold uppercase tracking-widest hover:bg-[#8b3746] transition-all transform active:scale-95 duration-200" href="https://docs.google.com/forms/d/e/1FAIpQLSeDbDVUT_qMIB-Qdxjw-MncR5c5OFHxoEpk4H9leTfyQ9-p4Q/viewform" target="_blank">RSVP Now</a>
-</div>
-<div class="md:hidden">
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSeDbDVUT_qMIB-Qdxjw-MncR5c5OFHxoEpk4H9leTfyQ9-p4Q/viewform" target="_blank" class="bg-primary text-on-primary px-4 py-2 rounded-md font-sans text-xs font-bold uppercase tracking-widest">RSVP</a>
-</div>
-</div>
+<nav class="fixed top-0 w-full z-50 bg-[#fbf9f4]/90 backdrop-blur-md transition-all duration-300 border-b border-surface-variant">
+    <div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+        <div class="font-headline text-2xl font-bold text-primary tracking-tight">
+            MICDS Class of 2001
+        </div>
+        <div class="hidden md:flex space-x-8 items-center">
+            <a class="font-sans text-xs font-semibold uppercase tracking-wider text-primary border-b-2 border-primary pb-1" href="#schedule">Schedule</a>
+            <a class="font-sans text-xs font-semibold uppercase tracking-wider text-stone-600 hover:text-primary transition-colors duration-300" href="#rsvp">RSVP</a>
+            <a class="font-sans text-xs font-semibold uppercase tracking-wider text-stone-600 hover:text-primary transition-colors duration-300" href="#giving">Giving</a>
+            <a class="bg-primary text-on-primary px-6 py-2.5 rounded-md font-sans text-xs font-bold uppercase tracking-widest hover:bg-[#8b3746] transition-all transform active:scale-95 duration-200 shadow-md" href="https://docs.google.com/forms/d/e/1FAIpQLSeDbDVUT_qMIB-Qdxjw-MncR5c5OFHxoEpk4H9leTfyQ9-p4Q/viewform" target="_blank">
+                Register Now
+            </a>
+        </div>
+    </div>
 </nav>
 
 <!-- Hero Section -->
-<section class="relative min-h-[921px] flex items-center pt-20 overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-20 scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAELcZvPRh9QfK0huyjjFEGdJ1V9WdrPG_M_Zxymu--mCV2VKPapfY8Q7DbV7_3iPuByYon0cFzIiPscSgwW6Q7I3D14ZhI2PgmwPavRWjNir4SemFsvOEwKj4-RI1yz-YRR3qaAgE6Etptv8dI1Amg69y4y9CPhRDsLRdC53_gLd9WvqaBnSU7IMCv8FqYPhBH2uV59hShKHVZRaYby8JWzgttJYCMgEC2reamn4hSsRAdl5Z0j_Yp3Uu_RkoF2rB-xW1nylCxcQ" alt="Historic MICDS campus" />
-<div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background"></div>
-</div>
-<div class="container mx-auto px-8 relative z-10">
-<div class="max-w-4xl">
-<div class="inline-block py-1 px-4 mb-6 bg-tertiary-container rounded-full">
-<span class="text-on-tertiary-container text-xs font-bold uppercase tracking-[0.2em]">Twenty-Fifth Anniversary</span>
-</div>
-<h1 class="font-headline text-6xl md:text-8xl font-bold text-primary mb-6 leading-[1.1] tracking-tight">Class of 2001 <br/>25th Reunion</h1>
-<p class="font-headline text-2xl md:text-3xl text-secondary mb-10 italic">May 1 – May 3, 2026 • Saint Louis, Missouri</p>
-<div class="flex flex-col sm:flex-row gap-4">
-<a class="bg-primary text-on-primary px-10 py-5 rounded-md font-sans text-sm font-bold uppercase tracking-widest shadow-xl shadow-primary/20 hover:translate-y-[-2px] transition-all" href="https://docs.google.com/forms/d/e/1FAIpQLSeDbDVUT_qMIB-Qdxjw-MncR5c5OFHxoEpk4H9leTfyQ9-p4Q/viewform" target="_blank">RSVP Now</a>
-<a class="bg-surface-container-lowest text-secondary px-10 py-5 rounded-md font-sans text-sm font-bold uppercase tracking-widest border border-secondary/10 hover:bg-surface-container-low transition-all" href="#schedule">View Schedule</a>
-</div>
-</div>
-</div>
+<section class="relative min-h-[85vh] flex items-center pt-20 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img class="w-full h-full object-cover opacity-[0.15] scale-105" alt="MICDS Campus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAELcZvPRh9QfK0huyjjFEGdJ1V9WdrPG_M_Zxymu--mCV2VKPapfY8Q7DbV7_3iPuByYon0cFzIiPscSgwW6Q7I3D14ZhI2PgmwPavRWjNir4SemFsvOEwKj4-RI1yz-YRR3qaAgE6Etptv8dI1Amg69y4y9CPhRDsLRdC53_gLd9WvqaBnSU7IMCv8FqYPhBH2uV59hShKHVZRaYby8JWzgttJYCMgEC2reamn4hSsRAdl5Z0j_Yp3Uu_RkoF2rB-xW1nylCxcQ"/>
+        <div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background"></div>
+    </div>
+    <div class="container mx-auto px-8 relative z-10 max-w-7xl">
+        <div class="max-w-4xl">
+            <div class="inline-block py-1.5 px-4 mb-6 bg-tertiary-container rounded-full border border-tertiary/20">
+                <span class="text-on-tertiary-container text-[10px] font-bold uppercase tracking-[0.2em]">Twenty-Fifth Anniversary</span>
+            </div>
+            <h1 class="font-headline text-6xl md:text-8xl font-bold text-primary mb-6 leading-[1.05] tracking-tight">
+                Class of 2001 <br/>25th Reunion
+            </h1>
+            <p class="font-headline text-2xl md:text-3xl text-secondary mb-12 italic">
+                May 1 - May 3, 2026 • Saint Louis, Missouri
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a class="bg-primary text-on-primary px-10 py-5 rounded-md font-sans text-sm font-bold uppercase tracking-widest shadow-xl shadow-primary/20 hover:translate-y-[-2px] transition-all text-center" href="https://docs.google.com/forms/d/e/1FAIpQLSeDbDVUT_qMIB-Qdxjw-MncR5c5OFHxoEpk4H9leTfyQ9-p4Q/viewform" target="_blank">
+                    RSVP Now
+                </a>
+                <a class="bg-surface-container-lowest text-secondary px-10 py-5 rounded-md font-sans text-sm font-bold uppercase tracking-widest border border-secondary/20 hover:bg-surface-container-low transition-all text-center" href="#schedule">
+                    View Schedule
+                </a>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- Schedule Section -->
-<section class="py-24 bg-surface-container-low" id="schedule">
-<div class="container mx-auto px-8">
-<div class="mb-16 max-w-2xl">
-<h2 class="font-headline text-4xl font-semibold text-on-surface mb-4 tracking-tight">A Weekend of Reflection &amp; Celebration</h2>
-<div class="w-20 h-1 bg-primary mb-6"></div>
-<p class="text-on-surface-variant text-lg">From campus tours to evening galas, join us as we revisit our roots and celebrate how far we've come.</p>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<section class="py-24 bg-surface-container-low border-y border-surface-variant" id="schedule">
+    <div class="container mx-auto px-8 max-w-7xl">
+        <div class="mb-16 max-w-2xl">
+            <h2 class="font-headline text-4xl font-semibold text-on-surface mb-4 tracking-tight">A Weekend of Reflection &amp; Celebration</h2>
+            <div class="w-20 h-1 bg-primary mb-6"></div>
+            <p class="text-on-surface-variant text-lg">From campus tours to evening galas, join us as we revisit our roots and celebrate how far we've come.</p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Friday -->
+            <div class="bg-surface-container-lowest p-8 rounded-xl relative overflow-hidden group shadow-sm border border-surface-variant">
+                <div class="absolute top-0 left-0 w-1.5 h-full bg-primary transition-all group-hover:w-2.5"></div>
+                <span class="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-secondary mb-4 block">Friday, May 1</span>
+                <h3 class="font-headline text-2xl font-bold mb-8 text-on-surface">Homecoming Kickoff</h3>
+                <div class="space-y-8">
+                    <div class="flex gap-4">
+                        <span class="material-symbols-outlined text-primary mt-1">wine_bar</span>
+                        <div>
+                            <p class="font-bold text-on-surface text-sm">Adult-only Reception &amp; Dinner</p>
+                            <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">5:00 PM – 8:30 PM • McDonnell Athletic Center (MAC)</p>
+                            <p class="text-xs text-on-surface-variant mt-1 italic">Park in C Lot, Entrance #1 off Ladue Rd. Classes of '01 &amp; '76 are complimentary (up to 2 guests).</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <span class="material-symbols-outlined text-primary mt-1">camera_roll</span>
+                        <div>
+                            <p class="font-bold text-on-surface text-sm">Class Photo</p>
+                            <p class="text-xs text-on-surface-variant mt-1">6:45 PM • The MAC Entrance</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <span class="material-symbols-outlined text-primary mt-1">local_bar</span>
+                        <div>
+                            <p class="font-bold text-on-surface text-sm">After-party</p>
+                            <p class="text-xs text-on-surface-variant mt-1">9:00 PM • CJ Muggs in Clayton (hosted by Margot Langsdorf)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<!-- Friday -->
-<div class="bg-surface-container-lowest p-8 rounded-xl relative overflow-hidden group">
-<div class="absolute top-0 left-0 w-1 h-full bg-primary transition-all group-hover:w-2"></div>
-<span class="font-sans text-xs font-bold uppercase tracking-[0.2em] text-secondary mb-4 block">Friday, May 1</span>
-<h3 class="font-headline text-2xl font-bold mb-8">Homecoming Kickoff</h3>
-<div class="space-y-6">
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-primary mt-1">wine_bar</span>
-<div>
-<p class="font-bold text-on-surface">Adult-only Reception &amp; Dinner</p>
-<p class="text-sm text-on-surface-variant">5:00 PM – 8:30 PM · McDonnell Athletic Center</p>
-<p class="text-xs text-on-surface-variant mt-1">Park in C Lot, Entrance #1 off Ladue Rd (west of Warson). Complimentary for 2 guests.</p>
-</div>
-</div>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-primary mt-1">camera_roll</span>
-<div>
-<p class="font-bold text-on-surface">Class Photo</p>
-<p class="text-sm text-on-surface-variant">~6:45 PM · MAC Entrance</p>
-</div>
-</div>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-primary mt-1">local_bar</span>
-<div>
-<p class="font-bold text-on-surface">After-Party at CJ Muggs</p>
-<p class="text-sm text-on-surface-variant">9:00 PM · Clayton (hosted by Margot Langsdorf)</p>
-</div>
-</div>
-</div>
-</div>
+            <!-- Saturday -->
+            <div class="bg-surface-container-lowest p-8 rounded-xl relative overflow-hidden group shadow-sm border border-surface-variant">
+                <div class="absolute top-0 left-0 w-1.5 h-full bg-secondary transition-all group-hover:w-2.5"></div>
+                <span class="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Saturday, May 2</span>
+                <h3 class="font-headline text-2xl font-bold mb-8 text-on-surface">Legacy &amp; Leisure</h3>
+                <div class="space-y-8">
+                    <div class="flex gap-4">
+                        <span class="material-symbols-outlined text-secondary mt-1">school</span>
+                        <div>
+                            <p class="font-bold text-on-surface text-sm">Campus Tours</p>
+                            <p class="text-xs text-on-surface-variant mt-1">10:00 AM - 12:00 PM • Kids welcome</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <span class="material-symbols-outlined text-secondary mt-1">sports_score</span>
+                        <div>
+                            <p class="font-bold text-on-surface text-sm">Family Bowling</p>
+                            <p class="text-xs text-on-surface-variant mt-1">Afternoon • Olivet Lanes • Kids welcome</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <span class="material-symbols-outlined text-secondary mt-1">celebration</span>
+                        <div>
+                            <p class="font-bold text-on-surface text-sm">Adult Cocktail Party</p>
+                            <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">5:00 PM - 9:00 PM • St. Louis Country Club (Card Room)<br/>Complimentary for you and a plus-one.</p>
+                            <a href="https://maps.app.goo.gl/Z6NiCTvRfjmgitJy9" target="_blank" class="text-[10px] uppercase font-bold text-secondary tracking-widest mt-2 inline-block hover:underline">Western Entrance Parking Map →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<!-- Saturday -->
-<div class="bg-surface-container-lowest p-8 rounded-xl relative overflow-hidden group">
-<div class="absolute top-0 left-0 w-1 h-full bg-secondary transition-all group-hover:w-2"></div>
-<span class="font-sans text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Saturday, May 2</span>
-<h3 class="font-headline text-2xl font-bold mb-8">Legacy &amp; Leisure</h3>
-<div class="space-y-6">
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-secondary mt-1">school</span>
-<div>
-<p class="font-bold text-on-surface">Campus Tours</p>
-<p class="text-sm text-on-surface-variant">10:00 AM – 12:00 PM · Kids welcome</p>
-</div>
-</div>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-secondary mt-1">sports_score</span>
-<div>
-<p class="font-bold text-on-surface">Family Bowling</p>
-<p class="text-sm text-on-surface-variant">Afternoon · Olivet Lanes, Olive Blvd · Kids welcome</p>
-</div>
-</div>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-secondary mt-1">celebration</span>
-<div>
-<p class="font-bold text-on-surface">Adult Cocktail Party</p>
-<p class="text-sm text-on-surface-variant">5:00 PM – 9:00 PM · St. Louis Country Club, Card Room</p>
-<p class="text-xs text-on-surface-variant mt-1">Complimentary for 2 guests. <a href="https://maps.app.goo.gl/Z6NiCTvRfjmgitJy9" target="_blank" class="underline text-secondary">Western entrance parking →</a></p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Sunday -->
-<div class="bg-surface-container-lowest p-8 rounded-xl relative overflow-hidden group">
-<div class="absolute top-0 left-0 w-1 h-full bg-tertiary transition-all group-hover:w-2"></div>
-<span class="font-sans text-xs font-bold uppercase tracking-[0.2em] text-on-surface-variant mb-4 block">Sunday, May 3</span>
-<h3 class="font-headline text-2xl font-bold mb-8">Family Farewell</h3>
-<div class="space-y-6">
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-tertiary mt-1">pool</span>
-<div>
-<p class="font-bold text-on-surface">Family Pool Party</p>
-<p class="text-sm text-on-surface-variant">Chris Preston's Residence · ~25 min from SLCC</p>
-<p class="text-[10px] uppercase font-bold text-tertiary mt-1 italic tracking-widest">Pending Headcount — RSVP Required</p>
-<p class="text-xs text-on-surface-variant mt-2">Out-of-towners: factor this in before booking your return flight!</p>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
+            <!-- Sunday -->
+            <div class="bg-surface-container-lowest p-8 rounded-xl relative overflow-hidden group shadow-sm border border-surface-variant">
+                <div class="absolute top-0 left-0 w-1.5 h-full bg-tertiary transition-all group-hover:w-2.5"></div>
+                <span class="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant mb-4 block">Sunday, May 3</span>
+                <h3 class="font-headline text-2xl font-bold mb-8 text-on-surface">Family Farewell</h3>
+                <div class="space-y-8">
+                    <div class="flex gap-4">
+                        <span class="material-symbols-outlined text-tertiary mt-1">pool</span>
+                        <div>
+                            <p class="font-bold text-on-surface text-sm">Family Pool Party</p>
+                            <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Chris Preston's Residence (~25 min away) • Kids welcome</p>
+                            <p class="text-[10px] uppercase font-bold text-tertiary mt-2 tracking-widest bg-tertiary/10 inline-block px-2 py-1 rounded">Pending Headcount</p>
+                            <p class="text-[10px] text-on-surface-variant mt-2 italic">Out-of-towners: please factor this in before booking return flights!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
 </section>
 
 <!-- RSVP Section -->
-<section class="py-24 bg-white relative" id="rsvp">
-<div class="container mx-auto px-8 max-w-5xl">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-<div>
-<h2 class="font-headline text-5xl font-bold text-primary mb-6">Counting the Days (and the Heads)</h2>
-<p class="text-on-surface-variant text-lg mb-8 leading-relaxed">To ensure we have enough refreshments, space, and spirit for everyone, please complete the official RSVP form. Your prompt response helps our volunteers coordinate the perfect weekend — and helps Chris Preston decide on the Sunday pool party.</p>
-<a class="inline-flex items-center gap-3 bg-secondary text-on-secondary px-8 py-4 rounded-md font-sans text-sm font-bold uppercase tracking-widest hover:bg-on-secondary-fixed-variant transition-all group" href="https://docs.google.com/forms/d/e/1FAIpQLSeDbDVUT_qMIB-Qdxjw-MncR5c5OFHxoEpk4H9leTfyQ9-p4Q/viewform" target="_blank">
-  Official RSVP Form
-  <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-<div class="relative">
-<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
-<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzP_RMmDR1Q4yi8RwUcR029o2cjSjU4hbz2dFouCwWYYShtl2Ys1xolorOYP-QqT4RdsJaozWBBIF8MbdsHKwfBj78naR2-pvz6TaIFhAKk9oWVTcvYavChBPQLSaoZcSjtw63EebTcXJlWm-CxAwEnRFChzTkDBEXeeCoxun9HGHTL7czT8idyHb2T_qMNvMFnDapiNO3qVUN2-RBHp4wEbhNthXb4Aj7ZU4BUvoaLa0lbupFtY1QlEANisQi2i8xYhMJq-Wlug" alt="Festive outdoor gathering" />
-</div>
-<div class="absolute -bottom-6 -left-6 bg-primary text-on-primary p-8 rounded-lg shadow-xl hidden md:block">
-<p class="font-headline text-3xl font-bold mb-1">126</p>
-<p class="font-sans text-[10px] font-bold uppercase tracking-widest opacity-80">Classmates Emailed</p>
-</div>
-</div>
-</div>
-</div>
+<section class="py-24 bg-surface-container-lowest relative" id="rsvp">
+    <div class="container mx-auto px-8 max-w-6xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="font-headline text-5xl font-bold text-primary mb-6 leading-tight">Counting the Days<br/>(and the Heads)</h2>
+                <p class="text-on-surface-variant text-lg mb-8 leading-relaxed">
+                    To ensure we have enough refreshments, space, and spirit for everyone, please complete the official RSVP form. Your prompt response helps our volunteers coordinate the perfect weekend — and helps Chris Preston make the call on Sunday's pool party.
+                </p>
+                <a class="inline-flex items-center gap-3 bg-secondary text-on-secondary px-8 py-4 rounded-md font-sans text-sm font-bold uppercase tracking-widest hover:bg-on-secondary-container transition-all group shadow-lg shadow-secondary/20" href="https://docs.google.com/forms/d/e/1FAIpQLSeDbDVUT_qMIB-Qdxjw-MncR5c5OFHxoEpk4H9leTfyQ9-p4Q/viewform" target="_blank">
+                    Official Google Form
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+            </div>
+            <div class="relative pl-4">
+                <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl border border-surface-variant">
+                    <img class="w-full h-full object-cover" alt="Alumni Dinner Gathering" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzP_RMmDR1Q4yi8RwUcR029o2cjSjU4hbz2dFouCwWYYShtl2Ys1xolorOYP-QqT4RdsJaozWBBIF8MbdsHKwfBj78naR2-pvz6TaIFhAKk9oWVTcvYavChBPQLSaoZcSjtw63EebTcXJlWm-CxAwEnRFChzTkDBEXeeCoxun9HGHTL7czT8idyHb2T_qMNvMFnDapiNO3qVUN2-RBHp4wEbhNthXb4Aj7ZU4BUvoaLa0lbupFtY1QlEANisQi2i8xYhMJq-Wlug"/>
+                </div>
+                <div class="absolute -bottom-6 -left-2 bg-primary text-on-primary p-8 rounded-lg shadow-xl hidden md:block">
+                    <p class="font-headline text-4xl font-bold mb-1">126</p>
+                    <p class="font-sans text-[10px] font-bold uppercase tracking-widest opacity-80">Classmates Emailed</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- Memorial Section -->
 <section class="py-24 bg-surface-dim relative overflow-hidden">
-<div class="container mx-auto px-8 max-w-4xl text-center relative z-10">
-<span class="material-symbols-outlined text-on-surface-variant text-4xl mb-6">format_quote</span>
-<h2 class="font-headline text-4xl font-semibold text-on-surface mb-12">Remembering Friends Who Left Too Soon</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-center">
-<div class="p-10 bg-surface-container-lowest/50 backdrop-blur rounded-2xl border border-white/20">
-<h3 class="font-headline text-2xl font-bold text-secondary mb-2">Paul Deathrage</h3>
-<p class="font-sans text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-4">Class of 2001</p>
-<div class="w-12 h-px bg-secondary/30 mx-auto"></div>
-</div>
-<div class="p-10 bg-surface-container-lowest/50 backdrop-blur rounded-2xl border border-white/20">
-<h3 class="font-headline text-2xl font-bold text-secondary mb-2">Matt Neal</h3>
-<p class="font-sans text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-4">Class of 2001</p>
-<div class="w-12 h-px bg-secondary/30 mx-auto"></div>
-</div>
-</div>
-<p class="mt-16 text-on-surface-variant italic font-serif text-lg">"Their laughter echoes in the halls of our memory."</p>
-<p class="mt-8 text-sm text-on-surface-variant">On Saturday night at SLCC we will have a dedicated space to honor them and sign a card for their families. To share photos or artifacts in advance, email <a href="mailto:turner@peters.xyz" class="underline text-secondary">turner@peters.xyz</a>.</p>
-</div>
-<div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
-<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary rounded-full blur-[120px] -mr-64 -mt-64"></div>
-<div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary rounded-full blur-[120px] -ml-64 -mb-64"></div>
-</div>
+    <div class="container mx-auto px-8 max-w-4xl text-center relative z-10">
+        <span class="material-symbols-outlined text-on-surface-variant opacity-50 text-5xl mb-6">format_quote</span>
+        <h2 class="font-headline text-4xl font-semibold text-on-surface mb-12 tracking-tight">Remembering Friends Who Left Too Soon</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center mb-12">
+            <div class="p-10 bg-surface-container-lowest/70 backdrop-blur-sm rounded-2xl border border-white/40 shadow-sm">
+                <h3 class="font-headline text-2xl font-bold text-secondary mb-2">Paul Deathrage</h3>
+                <p class="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant mb-4 opacity-70">Class of 2001</p>
+                <div class="w-12 h-px bg-secondary/30 mx-auto"></div>
+            </div>
+            <div class="p-10 bg-surface-container-lowest/70 backdrop-blur-sm rounded-2xl border border-white/40 shadow-sm">
+                <h3 class="font-headline text-2xl font-bold text-secondary mb-2">Matt Neal</h3>
+                <p class="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant mb-4 opacity-70">Class of 2001</p>
+                <div class="w-12 h-px bg-secondary/30 mx-auto"></div>
+            </div>
+        </div>
+        
+        <p class="text-on-surface-variant italic font-serif text-xl opacity-80">
+            "Their laughter echoes in the halls of our memory."
+        </p>
+        <p class="mt-8 text-sm text-on-surface-variant max-w-2xl mx-auto">
+            On Saturday night at SLCC we will have a dedicated space to honor Paul and Matt and sign a card for their families. To share photos or artifacts in advance, please email <a href="mailto:turner@peters.xyz" class="text-secondary font-bold hover:underline">turner@peters.xyz</a>.
+        </p>
+    </div>
+    
+    <!-- Decorative background blobs -->
+    <div class="absolute inset-0 z-0 opacity-[0.03] pointer-events-none">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary rounded-full blur-[120px] -mr-64 -mt-64"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary rounded-full blur-[120px] -ml-64 -mb-64"></div>
+    </div>
 </section>
 
 <!-- Giving Section -->
-<section class="py-24 bg-background" id="giving">
-<div class="container mx-auto px-8">
-<div class="bg-primary p-12 md:p-20 rounded-3xl text-on-primary flex flex-col lg:flex-row gap-16 items-center shadow-2xl shadow-primary/30">
-<div class="lg:w-1/2">
-<span class="font-sans text-xs font-bold uppercase tracking-[0.3em] mb-4 block">The Reunion Challenge</span>
-<h2 class="font-headline text-5xl md:text-6xl font-bold mb-8 leading-tight">Class of 2001 Reunion Gift</h2>
-<p class="text-on-primary-container text-lg mb-10 opacity-90 leading-relaxed">In honor of our 25th, we've set a goal of <strong>$30,000</strong> for the MICDS Fund. Last year, the Class of 2000 achieved an incredible milestone — let's show them what 2001 can do for the next generation of Rams.</p>
-<a class="inline-block bg-white text-primary px-10 py-5 rounded-md font-sans text-sm font-bold uppercase tracking-widest hover:scale-105 transition-all" href="https://www.micds.org/alumni/reunions-and-reunion-giving/#reunion-giving" target="_blank">Make Your Gift →</a>
-</div>
-<div class="lg:w-1/2 w-full">
-<div class="bg-white/10 backdrop-blur-md p-10 rounded-2xl border border-white/10">
-<div class="flex justify-between items-end mb-4">
-<span class="font-sans text-sm font-bold uppercase tracking-widest">Goal: $30,000</span>
-<span class="font-headline text-4xl font-bold">May 3</span>
-</div>
-<div class="w-full h-4 bg-white/20 rounded-full mb-2 overflow-hidden">
-<div class="h-full bg-white w-[64%]"></div>
-</div>
-<p class="text-xs opacity-60 mb-8">Progress bar is illustrative — every gift counts.</p>
-<div class="grid grid-cols-2 gap-8">
-<div>
-<p class="text-[10px] uppercase font-bold tracking-widest opacity-70 mb-1">Deadline</p>
-<p class="text-2xl font-bold">May 3, midnight</p>
-</div>
-<div>
-<p class="text-[10px] uppercase font-bold tracking-widest opacity-70 mb-1">Class to Beat</p>
-<p class="text-2xl font-bold">2000 ($55k)</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<section class="py-24 bg-surface-container-lowest" id="giving">
+    <div class="container mx-auto px-8 max-w-6xl">
+        <div class="bg-primary p-12 md:p-20 rounded-3xl text-on-primary flex flex-col lg:flex-row gap-16 items-center shadow-2xl shadow-primary/20 relative overflow-hidden">
+            <!-- Subtle background pattern -->
+            <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;"></div>
+            
+            <div class="lg:w-1/2 relative z-10">
+                <span class="font-sans text-[10px] font-bold uppercase tracking-[0.3em] mb-4 block opacity-80 text-tertiary-container">The Reunion Challenge</span>
+                <h2 class="font-headline text-5xl md:text-6xl font-bold mb-6 leading-tight">Class of 2001<br/>Reunion Gift</h2>
+                <p class="text-on-primary-container text-lg mb-10 opacity-90 leading-relaxed">
+                    In honor of our 25th, we've set a goal of <strong>$30,000</strong> for the MICDS Fund. Last year, the Class of 2000 raised over $55k—let's show them what 2001 can do for the next generation of Rams.
+                </p>
+                <a class="inline-block bg-surface-container-lowest text-primary px-10 py-5 rounded-md font-sans text-sm font-bold uppercase tracking-widest hover:scale-[1.02] hover:shadow-lg transition-all" href="https://www.micds.org/alumni/reunions-and-reunion-giving/#reunion-giving" target="_blank">
+                    Make Your Gift
+                </a>
+            </div>
+            
+            <div class="lg:w-1/2 w-full relative z-10">
+                <div class="bg-white/10 backdrop-blur-md p-10 rounded-2xl border border-white/20 shadow-xl">
+                    <div class="flex justify-between items-end mb-4">
+                        <span class="font-sans text-xs font-bold uppercase tracking-widest text-tertiary-container">Goal: $30,000</span>
+                        <span class="font-headline text-3xl font-bold text-white">May 3</span>
+                    </div>
+                    <div class="w-full h-3 bg-black/20 rounded-full mb-3 overflow-hidden shadow-inner">
+                        <div class="h-full bg-white w-[15%] rounded-full relative">
+                            <div class="absolute inset-0 bg-white/40 animate-pulse"></div>
+                        </div>
+                    </div>
+                    <p class="text-[10px] opacity-60 mb-10 italic">Progress bar is illustrative — every gift counts.</p>
+                    
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <p class="text-[10px] uppercase font-bold tracking-[0.2em] opacity-70 mb-1.5 text-tertiary-container">Deadline</p>
+                            <p class="text-xl font-bold font-serif">May 3, Midnight</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] uppercase font-bold tracking-[0.2em] opacity-70 mb-1.5 text-tertiary-container">Class to Beat</p>
+                            <p class="text-xl font-bold font-serif">2000 ($55k+)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- Footer -->
-<footer class="w-full bg-[#fbf9f4] border-t border-stone-200/20">
-<div class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-start max-w-7xl mx-auto gap-12">
-<div class="max-w-md">
-<div class="text-lg font-serif font-semibold text-[#ab0016] mb-4">MICDS Class of 2001</div>
-<p class="font-sans text-sm leading-relaxed text-stone-500 mb-6">Organized by your reunion committee. Let's make this 25th anniversary one for the archives.</p>
-<div class="flex gap-4">
-<a class="text-stone-400 hover:text-primary transition-colors" href="mailto:turner@peters.xyz"><span class="material-symbols-outlined">mail</span></a>
-<a class="text-stone-400 hover:text-primary transition-colors" href="https://www.micds.org" target="_blank"><span class="material-symbols-outlined">public</span></a>
-<a class="text-stone-400 hover:text-primary transition-colors" href="https://docs.google.com/forms/d/e/1FAIpQLSeDbDVUT_qMIB-Qdxjw-MncR5c5OFHxoEpk4H9leTfyQ9-p4Q/viewform" target="_blank"><span class="material-symbols-outlined">share</span></a>
-</div>
-</div>
-<div class="grid grid-cols-2 gap-12">
-<div>
-<div class="font-sans text-xs font-bold uppercase mb-4 text-[#30685e]">Committee</div>
-<ul class="space-y-3 font-sans text-sm text-stone-500">
-<li>Turner Peters (Coordinator)</li>
-<li>Margot Langsdorf</li>
-<li>Chris Preston</li>
-</ul>
-</div>
-<div>
-<div class="font-sans text-xs font-bold uppercase mb-4 text-[#30685e]">Links</div>
-<ul class="space-y-3 font-sans text-sm text-stone-500">
-<li><a href="https://www.micds.org/alumni/reunions-and-reunion-giving/" target="_blank" class="hover:text-[#ab0016]">MICDS Reunion Info</a></li>
-<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeDbDVUT_qMIB-Qdxjw-MncR5c5OFHxoEpk4H9leTfyQ9-p4Q/viewform" target="_blank" class="hover:text-[#ab0016]">RSVP Form</a></li>
-<li><a href="mailto:turner@peters.xyz" class="hover:text-[#ab0016]">Contact Turner</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="max-w-7xl mx-auto px-8 py-8 border-t border-stone-200/50 flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="font-sans text-[10px] font-bold uppercase text-stone-400">© 2026 MICDS Class of 2001. For inquiries, contact Turner Peters · turner@peters.xyz · 314-997-3282</p>
-<div class="flex gap-8">
-<span class="font-sans text-[10px] font-bold uppercase text-stone-400 tracking-widest">Strength through Service</span>
-<span class="font-sans text-[10px] font-bold uppercase text-stone-400 tracking-widest">Est. 1859</span>
-</div>
-</div>
+<footer class="w-full bg-surface-container border-t border-surface-variant">
+    <div class="w-full py-16 px-8 flex flex-col md:flex-row justify-between items-start max-w-7xl mx-auto gap-16">
+        <div class="max-w-sm">
+            <div class="text-xl font-headline font-bold text-primary mb-4 tracking-tight">MICDS Class of 2001</div>
+            <p class="font-sans text-sm leading-relaxed text-on-surface-variant mb-8 opacity-90">
+                Organized by your reunion committee. Let's make this 25th anniversary one for the archives.
+            </p>
+            <div class="flex gap-5">
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="mailto:turner@peters.xyz"><span class="material-symbols-outlined text-2xl">mail</span></a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://www.micds.org" target="_blank"><span class="material-symbols-outlined text-2xl">public</span></a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://docs.google.com/forms/d/e/1FAIpQLSeDbDVUT_qMIB-Qdxjw-MncR5c5OFHxoEpk4H9leTfyQ9-p4Q/viewform" target="_blank"><span class="material-symbols-outlined text-2xl">edit_document</span></a>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 gap-16">
+            <div>
+                <div class="font-sans text-[10px] font-bold uppercase tracking-[0.2em] mb-5 text-secondary">Committee</div>
+                <ul class="space-y-3 font-sans text-sm text-on-surface-variant">
+                    <li>Turner Peters (Coordinator)</li>
+                    <li>Margot Langsdorf</li>
+                    <li>Chris Preston</li>
+                </ul>
+            </div>
+            <div>
+                <div class="font-sans text-[10px] font-bold uppercase tracking-[0.2em] mb-5 text-secondary">Quick Links</div>
+                <ul class="space-y-3 font-sans text-sm text-on-surface-variant">
+                    <li><a href="https://www.micds.org/alumni/reunions-and-reunion-giving/" target="_blank" class="hover:text-primary transition-colors">MICDS Reunion Info</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeDbDVUT_qMIB-Qdxjw-MncR5c5OFHxoEpk4H9leTfyQ9-p4Q/viewform" target="_blank" class="hover:text-primary transition-colors">RSVP Form</a></li>
+                    <li><a href="mailto:turner@peters.xyz" class="hover:text-primary transition-colors">Contact Turner</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-8 py-8 border-t border-surface-variant/50 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="font-sans text-[10px] font-bold uppercase tracking-wider text-on-surface-variant opacity-70">
+            © 2026 MICDS Class of 2001. Contact Turner Peters · turner@peters.xyz · 314-997-3282
+        </p>
+        <div class="flex gap-6">
+            <span class="font-sans text-[10px] font-bold uppercase text-on-surface-variant opacity-50 tracking-widest">Strength through Service</span>
+            <span class="font-sans text-[10px] font-bold uppercase text-on-surface-variant opacity-50 tracking-widest">Est. 1859</span>
+        </div>
+    </div>
 </footer>
 </body></html>
