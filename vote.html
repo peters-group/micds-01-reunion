@@ -70,14 +70,6 @@
         border-top: 4px solid #ff66cc;
         border-bottom: 4px solid #ff66cc;
     }
-    .marquee-text {
-        background-color: #000000;
-        color: #ffff00;
-        font-family: "Comic Sans MS", "Comic Neue", cursive, sans-serif;
-        font-weight: bold;
-        font-size: 1.2rem;
-        padding: 4px 0;
-    }
 </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
@@ -85,10 +77,8 @@
 <!-- 1999 Chaos Top Strip -->
 <div class="sticky top-0 z-50">
     <div class="hampster-bg overflow-hidden whitespace-nowrap py-1 relative flex items-center h-16">
-        <div class="animate-marquee whitespace-nowrap flex gap-4 text-4xl">
-            <!-- Fallback emojis until GIF is added -->
-            🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹
-            <!-- <img src="../reunion-voting/assets/hampton.gif" alt="Hampster Dance" class="h-12 inline-block" onerror="this.style.display='none'"> -->
+        <div id="hamsterStrip" class="animate-marquee whitespace-nowrap flex gap-4 items-center pr-8">
+            <!-- Populated by JavaScript so the original hamster GIFs vary without three identical in a row. -->
         </div>
         
         <button id="audioToggle" class="absolute right-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded text-sm shadow-[2px_2px_0px_#000] border-2 border-black active:translate-y-1 active:shadow-none transition-all z-10">
@@ -98,9 +88,6 @@
             <source src="assets/audio/originaldedodedo.wav" type="audio/wav">
         </audio>
     </div>
-    <marquee class="marquee-text w-full block" scrollamount="8">
-        WELCOME TO THE CLASS OF 2001 VOTING PAGE!!! *** VOTE FOR YOUR FAVORITE PHOTOS *** TOP 10 REVEALED AT REUNION!!! *** GO RAMS!!!
-    </marquee>
 </div>
 
 <!-- Main Content -->
@@ -215,6 +202,37 @@
     const elStatus = document.getElementById('statusMsg');
     const audioToggle = document.getElementById('audioToggle');
     const audioEl = document.getElementById('hampsterAudio');
+    const hamsterStrip = document.getElementById('hamsterStrip');
+
+    function populateHamsterStrip() {
+        const hamsterGifs = [
+            'assets/hamsters/hamwalk.gif',
+            'assets/hamsters/gerbil.gif',
+            'assets/hamsters/hamu.gif',
+            'assets/hamsters/anin.gif'
+        ];
+        const chosen = [];
+        const count = 28;
+
+        for (let i = 0; i < count; i++) {
+            let options = hamsterGifs;
+            if (i >= 2 && chosen[i - 1] === chosen[i - 2]) {
+                options = hamsterGifs.filter(src => src !== chosen[i - 1]);
+            }
+            chosen.push(options[Math.floor(Math.random() * options.length)]);
+        }
+
+        hamsterStrip.innerHTML = '';
+        chosen.forEach((src) => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = 'Dancing hamster';
+            img.className = 'h-12 w-auto inline-block';
+            hamsterStrip.appendChild(img);
+        });
+    }
+
+    populateHamsterStrip();
 
     // Audio Toggle Logic
     audioToggle.addEventListener('click', () => {
