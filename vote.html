@@ -130,6 +130,10 @@
                 <div class="h-3 mt-2 text-center">
                     <p id="statusMsg" class="text-secondary font-bold text-sm opacity-0 transition-opacity duration-300">✓ Vote recorded</p>
                 </div>
+                <p id="photoRemovalPrompt" class="mt-3 text-center text-xs text-on-surface-variant">
+                    Want the <span id="currentPhotoName" class="font-semibold">current photo</span> removed?
+                    Email <a id="photoRemovalLink" href="mailto:turner@peters.xyz" class="underline hover:text-primary">turner@peters.xyz</a>
+                </p>
             </div>
         </div>
 
@@ -166,15 +170,13 @@
 
         <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-5 text-sm font-medium">
             <a href="https://peters-group.github.io/micds-01-reunion/" class="hover:text-white transition-colors">Reunion Schedule & Details</a>
-            <a href="https://events.veracross.com/micds/514-MICDSReunion2026MICDS" class="hover:text-white transition-colors">Friday Registration</a>
-            <a href="https://www.micds.org/alumni/reunions-and-reunion-giving/MICDS" class="hover:text-white transition-colors">General Reunion Info</a>
+            <a href="https://www.micds.org/alumni/reunions-and-reunion-giving/" class="hover:text-white transition-colors">General Reunion Info</a>
             <a href="https://www.givecampus.com/campaigns/17598/donations/new?amt=Shared" class="hover:text-white transition-colors">Class of 2001 Donation Page</a>
             <a href="https://maps.app.goo.gl/Z6NiCTvRfjmgitJy9" class="hover:text-white transition-colors">SLCC Parking Map</a>
         </div>
 
         <div class="text-xs space-y-1 opacity-60">
-            <p>Want a photo removed? Email <a href="mailto:turner@peters.xyz" class="underline hover:text-white">turner@peters.xyz</a></p>
-            <p>© 2026 Class of 2001 Reunion Committee · Best viewed in Netscape Navigator 4.0 @ 800×600</p>
+            <p>© 2026</p>
         </div>
     </div>
 </footer>
@@ -197,6 +199,8 @@
     const elEnd = document.getElementById('endState');
     const elCutoff = document.getElementById('cutoffState');
     const elPhoto = document.getElementById('currentPhoto');
+    const elPhotoName = document.getElementById('currentPhotoName');
+    const elPhotoRemovalLink = document.getElementById('photoRemovalLink');
     const btnThis = document.getElementById('btnThis');
     const btnThat = document.getElementById('btnThat');
     const elStatus = document.getElementById('statusMsg');
@@ -296,6 +300,9 @@
 
         currentPhotoObj = photoQueue.pop();
         elPhoto.src = currentPhotoObj.url;
+        const photoName = currentPhotoObj.id || currentPhotoObj.url.split('/').pop();
+        elPhotoName.textContent = photoName;
+        elPhotoRemovalLink.href = `mailto:turner@peters.xyz?subject=${encodeURIComponent(`Photo removal request: ${photoName}`)}&body=${encodeURIComponent(`Please remove ${photoName} from the MICDS reunion voting page.`)}`;
         elVoting.classList.remove('hidden');
     }
 
