@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MICDS Class of 2001 | This or That?</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700;900&family=Inter:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="./favicon.png">
+<link rel="apple-touch-icon" href="./favicon.png">
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#ab0016",         /* MICDS Red */
+                    "on-primary": "#ffffff",
+                    "primary-container": "#d12229",
+                    "on-primary-container": "#ffe9e7",
+                    "secondary": "#30685e",       /* MICDS Green */
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#b4eee1",
+                    "on-secondary-container": "#144f46",
+                    "tertiary": "#8b3746",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#ffd9dc",
+                    "on-tertiary-container": "#400011",
+                    "background": "#fbf9f4",
+                    "on-background": "#1b1c19",
+                    "surface": "#fbf9f4",
+                    "on-surface": "#1b1c19",
+                    "surface-variant": "#e4e2dd",
+                    "on-surface-variant": "#5c403d",
+                    "surface-dim": "#dbdad5",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f5f3ee",
+                    "surface-container": "#efeee8",
+                    "surface-container-high": "#eae8e3",
+                    "surface-container-highest": "#e4e2dd",
+                    "micds-dark-red": "#581021"
+                },
+                fontFamily: {
+                    "headline": ["Noto Serif", "serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "sans": ["Inter", "sans-serif"],
+                    "script": ["Caveat", "cursive"]
+                },
+                animation: {
+                    'marquee': 'marquee 20s linear infinite',
+                },
+                keyframes: {
+                    marquee: {
+                        '0%': { transform: 'translateX(100%)' },
+                        '100%': { transform: 'translateX(-100%)' },
+                    }
+                }
+            }
+        }
+    }
+</script>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        vertical-align: middle;
+    }
+    .hampster-bg {
+        background-color: #ffff00;
+        border-top: 4px solid #ff66cc;
+        border-bottom: 4px solid #ff66cc;
+    }
+    .marquee-text {
+        background-color: #000000;
+        color: #ffff00;
+        font-family: "Comic Sans MS", "Comic Neue", cursive, sans-serif;
+        font-weight: bold;
+        font-size: 1.2rem;
+        padding: 4px 0;
+    }
+</style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+
+<!-- 1999 Chaos Top Strip -->
+<div class="sticky top-0 z-50">
+    <div class="hampster-bg overflow-hidden whitespace-nowrap py-1 relative flex items-center h-16">
+        <div class="animate-marquee whitespace-nowrap flex gap-4 text-4xl">
+            <!-- Fallback emojis until GIF is added -->
+            🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹 🐹
+            <!-- <img src="../reunion-voting/assets/hampton.gif" alt="Hampster Dance" class="h-12 inline-block" onerror="this.style.display='none'"> -->
+        </div>
+        
+        <button id="audioToggle" class="absolute right-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded text-sm shadow-[2px_2px_0px_#000] border-2 border-black active:translate-y-1 active:shadow-none transition-all z-10">
+            🔊 TURN ON DA TUNES
+        </button>
+        <audio id="hampsterAudio" loop>
+            <source src="assets/audio/dance.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <marquee class="marquee-text w-full block" scrollamount="8">
+        WELCOME TO THE CLASS OF 2001 VOTING PAGE!!! *** VOTE FOR YOUR FAVORITE PHOTOS *** TOP 10 REVEALED AT REUNION!!! *** GO RAMS!!!
+    </marquee>
+</div>
+
+<!-- Dignified Identity Bar -->
+<div class="bg-secondary text-on-secondary w-full py-4 border-b-[6px] border-primary shadow-md relative z-40">
+    <div class="max-w-4xl mx-auto px-6 flex items-center gap-6">
+        <!-- Shield Fallback -->
+        <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center shrink-0 border border-white/20">
+            <span class="font-headline font-bold text-2xl tracking-tighter">MI</span>
+        </div>
+        <div>
+            <h1 class="font-headline uppercase tracking-[0.15em] text-sm md:text-base font-semibold text-white/90">Mary Institute & Country Day School</h1>
+            <h2 class="font-script text-2xl md:text-3xl mt-1 text-white">Class of 2001 · Twenty-Fifth Reunion</h2>
+        </div>
+    </div>
+</div>
+
+<!-- Main Content -->
+<main class="flex-grow flex flex-col items-center px-4 py-12 relative z-30">
+    
+    <!-- Hero Text -->
+    <div class="text-center max-w-2xl mb-10">
+        <h2 class="font-headline font-black text-5xl md:text-7xl text-primary mb-3 tracking-tight">This or That?</h2>
+        <p class="font-script text-3xl text-secondary mb-6">Rams forever — settle it for the slideshow</p>
+        <p class="text-lg text-on-surface-variant max-w-xl mx-auto leading-relaxed">
+            Pick a side on every photo. Top ten <strong>This</strong> finishers earn top billing in the reunion-night reveal.
+        </p>
+    </div>
+
+    <!-- Vote Card Container -->
+    <div id="voteContainer" class="w-full max-w-[560px] bg-white rounded-xl shadow-xl border-t-[6px] border-secondary overflow-hidden relative">
+        
+        <!-- Loading State -->
+        <div id="loadingState" class="p-12 text-center">
+            <span class="material-symbols-outlined animate-spin text-4xl text-secondary mb-4">refresh</span>
+            <p class="text-on-surface-variant font-medium">Loading photos from the vault...</p>
+        </div>
+
+        <!-- Voting UI (Hidden initially) -->
+        <div id="votingUI" class="hidden flex-col h-full">
+            <!-- Photo Region -->
+            <div class="w-full aspect-[4/3] bg-surface-dim relative flex items-center justify-center p-2">
+                <img id="currentPhoto" src="" alt="Reunion Photo" class="w-full h-full object-contain drop-shadow-md rounded">
+            </div>
+            
+            <!-- Buttons -->
+            <div class="p-6 bg-white">
+                <div class="grid grid-cols-2 gap-4">
+                    <button id="btnThis" class="bg-secondary hover:bg-on-secondary-container text-white py-4 rounded-lg font-bold text-xl shadow-md transition-transform active:scale-95 flex items-center justify-center gap-2">
+                        This 💚
+                    </button>
+                    <button id="btnThat" class="bg-primary hover:bg-primary-container text-white py-4 rounded-lg font-bold text-xl shadow-md transition-transform active:scale-95 flex items-center justify-center gap-2">
+                        That ❤️
+                    </button>
+                </div>
+                <div class="h-6 mt-4 text-center">
+                    <p id="statusMsg" class="text-secondary font-bold text-sm opacity-0 transition-opacity duration-300">✓ Vote recorded</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Queue State (Hidden initially) -->
+        <div id="endState" class="hidden p-16 text-center">
+            <span class="material-symbols-outlined text-6xl text-secondary mb-6 block">task_alt</span>
+            <h3 class="font-headline font-bold text-3xl text-secondary mb-4">You voted on all of them. See you at Reunion.</h3>
+            <a href="https://peters-group.github.io/micds-01-reunion/" class="inline-block mt-6 bg-primary text-white px-8 py-3 rounded-md font-bold uppercase tracking-widest hover:bg-primary-container transition-colors">
+                Back to the reunion site →
+            </a>
+        </div>
+
+        <!-- Cutoff State (Hidden initially) -->
+        <div id="cutoffState" class="hidden p-16 text-center">
+            <span class="material-symbols-outlined text-6xl text-primary mb-6 block">lock_clock</span>
+            <h3 class="font-headline font-bold text-3xl text-primary mb-4">Voting has closed.</h3>
+            <p class="text-lg text-on-surface-variant">Watch this page for the top 10 reveal — link coming soon.</p>
+        </div>
+    </div>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-micds-dark-red text-white/80 py-12 mt-auto relative z-40 border-t border-black/20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+        <h4 class="font-headline font-bold tracking-widest uppercase text-white mb-8 text-lg">GO RAMS · EST. 1859</h4>
+        
+        <!-- 88x31 Badges (Placeholders) -->
+        <div class="flex flex-wrap justify-center gap-2 mb-10 opacity-90">
+            <!-- <img src="../reunion-voting/assets/badges/netscape.gif" alt="Netscape Now" width="88" height="31" onerror="this.style.display='none'"> -->
+            <!-- <img src="../reunion-voting/assets/badges/html4.gif" alt="HTML 4.01" width="88" height="31" onerror="this.style.display='none'"> -->
+            <!-- <img src="../reunion-voting/assets/badges/mac.gif" alt="Made on a Mac" width="88" height="31" onerror="this.style.display='none'"> -->
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-10 text-sm font-medium">
+            <a href="https://peters-group.github.io/micds-01-reunion/" class="hover:text-white transition-colors">Reunion Schedule & Details</a>
+            <a href="https://events.veracross.com/micds/514-MICDSReunion2026MICDS" class="hover:text-white transition-colors">Friday Registration</a>
+            <a href="https://www.micds.org/alumni/reunions-and-reunion-giving/MICDS" class="hover:text-white transition-colors">General Reunion Info</a>
+            <a href="https://www.givecampus.com/campaigns/17598/donations/new?amt=Shared" class="hover:text-white transition-colors">Class of 2001 Donation Page</a>
+            <a href="https://maps.app.goo.gl/Z6NiCTvRfjmgitJy9" class="hover:text-white transition-colors">SLCC Parking Map</a>
+        </div>
+
+        <div class="text-xs space-y-2 opacity-60">
+            <p>Want a photo removed? Email <a href="mailto:turner@peters.xyz" class="underline hover:text-white">turner@peters.xyz</a></p>
+            <p>© 2026 Class of 2001 Reunion Committee · Best viewed in Netscape Navigator 4.0 @ 800×600</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Configuration
+    const CUTOFF_UTC = '2026-05-02T17:00:00Z'; // Noon CDT May 2
+    const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfwNL5vlx0-1VmxIHEwaxTTtKzoqTJ8IscggL8yWO_giIA19Q/formResponse';
+    const FIELD_PHOTO = 'entry.477578263';
+    const FIELD_VOTE = 'entry.1922643128';
+    const LOCAL_STORAGE_KEY = 'micds_voted_v1';
+
+    // State
+    let photoQueue = [];
+    let currentPhotoObj = null;
+
+    // DOM Elements
+    const elLoading = document.getElementById('loadingState');
+    const elVoting = document.getElementById('votingUI');
+    const elEnd = document.getElementById('endState');
+    const elCutoff = document.getElementById('cutoffState');
+    const elPhoto = document.getElementById('currentPhoto');
+    const btnThis = document.getElementById('btnThis');
+    const btnThat = document.getElementById('btnThat');
+    const elStatus = document.getElementById('statusMsg');
+    const audioToggle = document.getElementById('audioToggle');
+    const audioEl = document.getElementById('hampsterAudio');
+
+    // Audio Toggle Logic
+    audioToggle.addEventListener('click', () => {
+        if (audioEl.paused) {
+            audioEl.play().then(() => {
+                audioToggle.textContent = '🔇 MUTE DA TUNES';
+                audioToggle.classList.replace('bg-blue-600', 'bg-red-600');
+                audioToggle.classList.replace('hover:bg-blue-700', 'hover:bg-red-700');
+            }).catch(e => console.error("Audio play failed:", e));
+        } else {
+            audioEl.pause();
+            audioToggle.textContent = '🔊 TURN ON DA TUNES';
+            audioToggle.classList.replace('bg-red-600', 'bg-blue-600');
+            audioToggle.classList.replace('hover:bg-red-700', 'hover:bg-blue-700');
+        }
+    });
+
+    // Initialize
+    async function init() {
+        // Check Cutoff
+        if (Date.now() >= new Date(CUTOFF_UTC).getTime()) {
+            elLoading.classList.add('hidden');
+            elCutoff.classList.remove('hidden');
+            return;
+        }
+
+        try {
+            // Fetch Photo DB
+            const response = await fetch('./photoDB.json');
+            if (!response.ok) throw new Error('Failed to load photoDB.json');
+            const allPhotos = await response.json();
+
+            // Get Voted History
+            const votedIds = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) || '[]');
+            const votedSet = new Set(votedIds);
+
+            // Filter Queue
+            photoQueue = allPhotos.filter(p => !votedSet.has(p.id));
+
+            // Shuffle Queue (Fisher-Yates)
+            for (let i = photoQueue.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [photoQueue[i], photoQueue[j]] = [photoQueue[j], photoQueue[i]];
+            }
+
+            elLoading.classList.add('hidden');
+            nextPhoto();
+
+        } catch (err) {
+            console.error(err);
+            elLoading.innerHTML = `<p class="text-primary font-bold">Error loading photos.</p><p class="text-sm mt-2">${err.message}</p>`;
+        }
+    }
+
+    function nextPhoto() {
+        if (photoQueue.length === 0) {
+            elVoting.classList.add('hidden');
+            elEnd.classList.remove('hidden');
+            return;
+        }
+
+        currentPhotoObj = photoQueue.pop();
+        elPhoto.src = currentPhotoObj.url;
+        elVoting.classList.remove('hidden');
+    }
+
+    async function submitVote(voteValue) {
+        if (!currentPhotoObj) return;
+
+        // Disable buttons temporarily
+        btnThis.disabled = true;
+        btnThat.disabled = true;
+        btnThis.classList.add('opacity-50');
+        btnThat.classList.add('opacity-50');
+
+        const photoId = currentPhotoObj.id;
+
+        // Prepare Form Data
+        const formData = new URLSearchParams();
+        formData.append(FIELD_PHOTO, photoId);
+        formData.append(FIELD_VOTE, voteValue);
+
+        try {
+            // Fire and forget (no-cors prevents reading response, but POST succeeds)
+            await fetch(FORM_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: formData
+            });
+
+            // Save to localStorage
+            const votedIds = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) || '[]');
+            votedIds.push(photoId);
+            localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(votedIds));
+
+            // Show Status
+            elStatus.classList.remove('opacity-0');
+            setTimeout(() => elStatus.classList.add('opacity-0'), 1500);
+
+            // Load Next
+            setTimeout(() => {
+                btnThis.disabled = false;
+                btnThat.disabled = false;
+                btnThis.classList.remove('opacity-50');
+                btnThat.classList.remove('opacity-50');
+                nextPhoto();
+            }, 400);
+
+        } catch (err) {
+            console.error("Vote failed:", err);
+            alert("Failed to submit vote. Please check your connection.");
+            btnThis.disabled = false;
+            btnThat.disabled = false;
+            btnThis.classList.remove('opacity-50');
+            btnThat.classList.remove('opacity-50');
+        }
+    }
+
+    // Event Listeners
+    btnThis.addEventListener('click', () => submitVote('This'));
+    btnThat.addEventListener('click', () => submitVote('That'));
+
+    // Start
+    init();
+</script>
+</body>
+</html>
